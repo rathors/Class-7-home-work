@@ -30,7 +30,7 @@ struct ModuleRecord{
 
 };
 
-bool ascend_sort(const ModuleRecord& i, const ModuleRecord& j){
+bool descend_sort(const ModuleRecord& i, const ModuleRecord& j){
 
     return i.grade > j.grade;
 
@@ -57,7 +57,7 @@ struct Module{
         }
         else {
 
-            std::sort(grades.begin(), grades.end(), ascend_sort);
+            std::sort(grades.begin(), grades.end(), descend_sort);
 
             for (const ModuleRecord& rec : grades) {
 
